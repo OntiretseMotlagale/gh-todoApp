@@ -20,5 +20,5 @@ jobs:
       - name: Run tests
         run: |
           xcodebuild test \
-          - scheme TodoApp \
-          - destination "platform=iOS Simulator, OS=latest"
+            -scheme TodoApp \
+            -destination "platform=iOS Simulator,OS=latest"

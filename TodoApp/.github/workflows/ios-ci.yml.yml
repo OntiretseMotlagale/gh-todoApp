@@ -1,15 +1,9 @@
-#
-//  ios-ci.yml.yml
-//  TodoApp
-//
-//  Created by Ontiretse Motlagale on 2026/05/27.
-//
-
 name: iOS CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -24,4 +18,4 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode.app
 
       - name: Run tests
-        run: xcodebuild test -scheme TodoCIApp -destination 'platform=iOS Simulator,name=iPhone 15'
+        run: xcodebuild test -scheme TodoCIApp -destination "platform=iOS Simulator,name=iPhone 15"

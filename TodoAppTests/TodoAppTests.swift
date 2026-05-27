@@ -24,9 +24,12 @@ final class TodoViewModelTests: XCTestCase {
     func test_toggleTodo() {
         let vm = TodoViewModel()
         vm.addTodo(title: "Test")
+        XCTAssertFalse(vm.todos.isEmpty)
 
         let id = vm.todos.first!.id
         vm.toggleTodo(id: id)
+
+        XCTAssertTrue(vm.todos.first!.isDone)
 
         XCTAssertTrue(vm.todos.first!.isDone)
     }
